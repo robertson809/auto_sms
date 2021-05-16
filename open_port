@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+PORT=${1:-8000}
+echo "Opening port $PORT"
+./ngrok http $PORT
+

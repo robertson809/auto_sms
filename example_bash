@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+PORT=${1?Error: no port given}
+PORT2=${2:-8001}
+ 
+echo "Opening port $PORT $PORT2"
+
