@@ -24,25 +24,18 @@ import time
 # print(latest_message.status)
 
 
-
-from twilio.rest import Client
-
 # Your Account SID from twilio.com/console
 account_sid = "AC1e1e420cecc71721849eacdf47a6226d"
 # Your Auth Token from twilio.com/console
-auth_token  = "2cb63e36a3458ab86eac7cae35403b5a"
+auth_token  = "31a1ea4fd6bc04d731502ccdc7eaab75"
 
 client = Client(account_sid,auth_token)
-s_number = 'whatsapp:+17044929850'
-my_number = 'whatsapp:+19739328700'
-O_number = "whatsapp:+17044511411"
-p_number = "whatsapp:+16177747415"
+my_number='+19739328700'
 
-from_number = '+19893421996'
 message = client.messages.create(
-    to=p_number,
-    from_="whatsapp:+14155238886",
-    body="Hello World!")
+    messaging_service_sid='MG4e49ca0b1d9df96b0a7f8ec497ea8995',
+    to=my_number,
+    body="Welcome to the Jungle")
 
 time.sleep(1)
 latest_message = client.messages(message.sid).fetch()
